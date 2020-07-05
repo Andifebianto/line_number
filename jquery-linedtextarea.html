@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Line Number Textarea Using jQuery</title>
+	<script src="jquery-min.js"></script>
+	<script src="jquery-linedtextarea.js"></script>
+	<link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<h1>Line Number Textarea Using jQuery</h1>
+
+<p>Add a scrollable lined area to a standard TextArea control.</p>
+
+<textarea class="lined" rows="5" cols="60">JavaScript was originally developed by Brendan 
+Eich of Netscape under the name Mocha, 
+which was later renamed to LiveScript, 
+and finally to JavaScript. 
+
+The change of name from LiveScript to JavaScript roughly 
+coincided with Netscape adding support for 
+</textarea>
+
+<script>
+	$(function() {
+	// Target all classed with ".lined"
+	$(".line").linedtextarea(
+		{selectedLine: 1}
+	);
+	// Target a single one
+  	$(".lined").linedtextarea();
+	console.log($(".lined"));
+	});
+</script>
+
+</body>
+</html>
